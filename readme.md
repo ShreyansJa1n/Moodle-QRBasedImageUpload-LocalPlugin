@@ -1,6 +1,6 @@
 <img src = "https://edwiser.org/wp-content/uploads/2016/05/moodle-plugins.png" > </img>
 
-First version of the project is at: <a href=https://github.com/PearlMiglani/Moodle-QR-Based-Image-Upload-Activity></a>
+First version of the project is at: https://github.com/PearlMiglani/Moodle-QR-Based-Image-Upload-Activity
 This is not a derivation of the project. This is another version with different approach of implementation that required its own repository. The developers of both the projects are same.
 
 # Moodle QR Based Image Upload Activity 🔌

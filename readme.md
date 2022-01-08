@@ -6,12 +6,12 @@ The QR Based Image Upload enables a student to upload images for questions which
 This Moodle activity module was created as a collaborative effort between Pearl Miglani and Shreyans Jain as a project during internship at NIIT University.
 
 
-## Functionalities
+## Functionalities 💪
 
 ![alt text](https://github.com/PearlMiglani/Moodle-QR-Based-Image-Upload-Activity/blob/main/screenshots/Screenshot%202021-07-29%20at%2011.52.56%20AM.png?raw=true)
 
 
-### Scan QR functionality
+### Scan QR functionality 🤳🏼
 
 When clicked on ‘Show QR’ in essay type questions, a dynamic and unique QR code is generated based on a unique ‘attempt id’ for each user and a random 6 digit code. Scanning this QR directs the user to another link hosted on the Moodle server. It also displays the expiration timer at the bottom.
 The expiration time period can be changed and will be discussed in the ‘Modularity’ section.
@@ -21,7 +21,7 @@ On Click &#8594;
 ![alt text](https://github.com/PearlMiglani/Moodle-QR-Based-Image-Upload-Activity/blob/main/screenshots/Screenshot%202021-07-29%20at%2011.54.00%20AM.png?raw=true)
 
 
-### Link directed to after scanning
+### Link directed to after scanning 🔗
 
 After scanning the link from a smartphone/tablet, when clicked on the ‘Capture Image’ button, the default camera app in the device opens and the user can click and upload images one by one. If the QR expires till then and the user wishes to upload more images, they can generate a new QR and scan it again to add additional images. The user is supposed to click on the submit button before the time expires to submit the selected images to the server. Same expiration timer as shown below the QR Code is shown on top of this page.
 
@@ -30,14 +30,14 @@ After scanning the link from a smartphone/tablet, when clicked on the ‘Capture
 
 
 
-### View/ Edit images
+### View/ Edit images 🏞
 
 All essay type questions have a ‘Show Image’ button which fetches the images uploaded by the user for that particular question. The functionality includes viewing the images in full screen and deleting them from the PC itself.
 
 ![alt text](https://github.com/PearlMiglani/Moodle-QR-Based-Image-Upload-Activity/blob/main/screenshots/Screenshot%202021-07-29%20at%2011.53.03%20AM.png?raw=true)
 
 
-### Image links for the teachers
+### Image links for the teachers/faculty
 
 Image links can be found at 4 places:
 1. Under the 'Attempts' menu, when viewing individual student's attempt in any way, complete quiz at a time or n (>=1) question(s) at a time.
@@ -45,27 +45,29 @@ Image links can be found at 4 places:
 3. Under these menus, when clicking on add comment and grade redirecting to comment.php
 4. Under 'Report' -> 'Manual Grading' menu option from quiz settings
 
-## Modularity
+## Modularity 🧩
 Key feature of this plugin is its modularity. Things that can be changed about this plugin without the need of any special tool or prior knowledge which will make this plugin unique for everyone.
 
-### Encryption Initialisation Vector and Encryption keys
+### Encryption Initialisation Vector and Encryption keys ⏳
 In the functionality of the plugin, there are some strings that are encrypted while being sent as a GET request or POST request within the plugin system (not contacting any external APIs) and in order to make it secure, the strings are encrypted. These are encrypted using AES-128-CTR. The Initialisation Vector and Key for it can be changed in the encry.php file. This file can be opened using a text editor.
 Path to the file: YOUR_MOODLE_DIR/local/qrbasedimage/encry.php
 
-### Expiration time of the QR Code
+### Expiration time of the QR Code 🕰
 The expiration time of the unique QR Code generated can be altered and the value has to be specified in timeQR.php file. Time specified here is in seconds and by default the value is set to 90. This file can be opened using a text editor.
 Path to the file: YOUR_MOODLE_DIR/local/qrbasedimage/timeQR.php
 
-### Your institution’s logo on the upload screen
+### Your institution’s logo on the upload screen 🏫
 By default Moodle logo is displayed on the screen where students upload the images for the answer’s attempt. That can be changed to your institution’s logo. Replace the png file in ‘YOUR_MOODLE_DIR/local/qrbasedimage/’ directory using the name ‘nu.png’.
 Once replaced it should reflect the changes on the upload page.
 
-### Upload instructions
+### Upload instructions 📤
 The upload instructions on the upload page can be changed. Replace the strings in the array. Replace and do the changes in upinstructions.php
 Path to the file YOUR_MOODLE_DIR/local/qrbasedimage/upinstructions.php
 
-## Installation Instructions-
-Install this plugin as a usual Moodle Plugin. Login as an Administrator on Moodle then go to Site Administration then go to Plugin and install the plugin from there. The installation will create 2 tables in the database for the functionality to work with names ‘mdl_images’ and ‘mdl_randomnumber’.
+## Installation Instructions 📥
+Install this plugin as a usual Moodle Plugin. Login as an Administrator on Moodle then go to Site Administration then go to Plugin and install the plugin from there. The installation will create 2 tables in the database for the functionality to work with names ‘images’ and ‘randomnumber’.
+
+Also, create a folder with name 'uploads' under your moodledata. All the images that will be uploaded will be stored here.
 
 
 After the installation, new files along with 2 new tables in the database should be created. Head over to the /local/qrbasedimage/ folder and find the url.php file. Within this file, change the given url to your Moodle URL (eg: https://exam.niituniversity.in/).

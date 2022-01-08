@@ -1,5 +1,8 @@
 <img src = "https://edwiser.org/wp-content/uploads/2016/05/moodle-plugins.png" > </img>
 
+First version of the project is at: <a href=https://github.com/PearlMiglani/Moodle-QR-Based-Image-Upload-Activity></a>
+This is not a derivation of the project. This is another version with different approach of implementation that required its own repository. The developers of both the projects are same.
+
 # Moodle QR Based Image Upload Activity 🔌
 The QR Based Image Upload enables a student to upload images for questions which require hand-written answers or diagrams while attempting a quiz in Moodle even in the SEB(Safe Exam Browser) mode where the user does not have access to external websites, system functions or other applications while they are taking an assessment online. This plugin takes effect on all ‘Essay’ type questions. All essay type questions consist of a ‘Show QR’ button which when clicked, activates a unique link for 90 seconds. Within this timeframe, the student has to scan the QR through their smartphone/tablet and upload the images. If a student fails to do so, they can click on ‘Show QR’ again and a new link will be generated. The link generated everytime is dynamic and unique in nature and allows the user only to upload using the smartphone/tablet camera. It restricts uploading of images through any other means to prevent unfair means of upload. 
 
